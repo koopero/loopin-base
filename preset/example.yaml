@@ -1,0 +1,75 @@
+# This file configures loopin to run the planet example.
+# Settings in this file will override settings from controls.
+# 
+
+# First, default to showing the example.
+show/buffer: example_planet
+
+# Create a `buffer` named 'example_planet'.
+# The default size of the buffer will match
+# the size of the application window.
+buffer/example_planet:
+  # Allocate a depth buffer as well as RGBA
+  depth: true
+
+# Here is the configuration for the actual rendering of
+# 'example_planet'.
+render/example_planet:
+  # Clear the buffer every frame
+  clear: true
+
+  # Use depth testing
+  depth: true
+
+  # The shader to use for rendering.
+  # This shader is autoloaded from '../shader/example_planet.vert' and
+  # '../shader/example_planet.frag'
+  shader: example_planet
+
+  # Use a camera, defined below.
+  camera: example_camera
+
+  # Use the mesh, defined below.
+  mesh: example_sphere
+
+  # Texture defintions:
+  # The keys 'src' and 'lightmap' correspond to uniforms
+  # such as 'srcSampler' & 'lightmapWidth' in shaders.
+  texture:
+    src:
+      buffer: example_earth
+      wrap: wrap
+      filter: linear
+
+    lightmap:
+      buffer: example_lightmap
+      wrap: clamp
+      filter: linear
+
+  # Set 2d transform
+  transform:
+    mode: contain
+
+# Reasonable defaults for the camera operator
+camera/example_camera:
+  zoom: -0.25
+  pitch: -49
+  yaw: 200
+  roll: -23
+
+# Define the mesh used for 'render/example_planet',
+# in this case a sphere.
+mesh/example_sphere:
+  aspect: 1
+  sphere:
+    rows: 40
+    cols: 40
+
+# This is the defintion of the lightmap, used to shader
+# the planet from one side to the other.
+# There is no data defined in this file. Rather, the data
+# is generated in the corresponding control in the
+# file '../control/example.md'
+pixels/example_lightmap:
+  format: hex
+  channels: rgb
