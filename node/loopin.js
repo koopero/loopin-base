@@ -23,8 +23,7 @@ loopin.plugin( require('loopin-shaders'), {
 // system, modified images may not be automatically
 // reloaded. If images aren't loaded at runtime,
 // restart the application.
-loopin.plugin('imageDir')
-loopin.imageDir( { watch: true, autoload: true } )
+loopin.plugin('imageDir', { watch: true, autoload: true } )
 
 // Include useful examples of higher-level logic.
 loopin.plugin( require('./logic/snapshot' ) )

@@ -63,7 +63,9 @@ subs:
   # updated in your application.
   buffer:
     options:
-      - example_planet
+      # Until controls map properly, put your buffers here
+      - example
+      - output
 ```
 
 ## Recorder
@@ -90,7 +92,9 @@ subs:
 
   buffer:
     options:
-      - example_planet
+      # Until controls map properly, put your buffers here
+      - example
+      - output
 ```
 
 

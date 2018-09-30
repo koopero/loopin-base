@@ -1,6 +1,4 @@
-This is a simple starter project for the [Loopin](https://github.com/koopero/loopin) creative coding system. It includes all the boilerplate and dependencies required to start development of a Loopin application. As well, it includes an example demo, implementing a spinning planet with motion blur and a cartoonishly simple, but expressive, lighting model.
-
-![Sample output of loopin-starter](image/example_planet.jpg)
+This is a base project for the [Loopin](https://github.com/koopero/loopin) creative coding system. It includes all the boilerplate and dependencies required to start development of a Loopin application.
 
 ## Requirements
 
@@ -48,8 +46,6 @@ YAML configuration files which are 'patched' to the Loopin system. By default, *
 GLSL shaders. To create a new shader, duplicate `shader/base.vert` and/or `shader/base.vert` with a new name.
 
 # Credits
-
-Planet images courtesy of [JHT's Planetary Pixel Emporium](http://planetpixelemporium.com/index.php).
 
 The [Loopin](https://github.com/koopero/loopin) system would not be possible without the support of [HFour Design Studio](http://hfour.ca/).
 

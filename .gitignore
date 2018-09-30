@@ -1,5 +1,4 @@
-.DS_Store
-tmp/
+
 
 # Runtime output from applications, including snapshots and
 # recorder output and intermediary files.
@@ -22,3 +21,11 @@ node_modules/
 npm-debug.log
 yarn.lock
 package-lock.json
+
+#
+# OS and other
+#
+.DS_Store
+.vscode
+.AppleDouble
+tmp/
