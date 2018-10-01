@@ -43,7 +43,7 @@ Mostly boilerplate code to get everything up and running. `node/loopin.js` conta
 YAML configuration files which are 'patched' to the Loopin system. By default, *all* presets in this directory are autoloaded.
 
 ### shader/
-GLSL shaders. To create a new shader, duplicate `shader/base.vert` and/or `shader/base.vert` with a new name.
+GLSL shaders. To create a new shader, duplicate `shader/base.vert` and/or `shader/base.vert` with a new name. See [Shader Cheat Sheet](shader/README.md) for uniform reference.
 
 # Credits
 
