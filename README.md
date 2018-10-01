@@ -2,13 +2,15 @@ This is a base project for the [Loopin](https://github.com/koopero/loopin) creat
 
 ## Requirements
 
-*Windows is not supported at this time.* This project should work on a properly configured Intel-based Mac or Linux box. For more detailed requirements, see [loopin-native](https://github.com/koopero/loopin-native). As well, to use the `recorder` function of this demo, you will need [ffmpeg](http://www.ffmpeg.org/download.html).
+This project should work on a properly configured Mac, Linux or Windows box or a Raspberry Pi. For more detailed requirements, see [loopin-native](https://github.com/koopero/loopin-native). As well, to use the `recorder` function of this demo, you will need [ffmpeg](http://www.ffmpeg.org/download.html).
 
 ## Installation
 
 ``` sh
 git clone https://github.com/koopero/loopin-starter.git YOURPROJECT
 cd YOURPROJECT
+# Set your project name, repositories, etc here.
+npm init 
 npm install
 npm start
 ```
