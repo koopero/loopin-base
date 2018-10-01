@@ -31,6 +31,25 @@ void main()
 }
 ```
 
+# Textures
+
+### Shortcut with include
+``` glsl
+#include "ofxLoopin/src.glsl"
+```
+
+### Expanded
+``` glsl
+uniform sampler2D srcSampler; // GLSL Sampler
+uniform mat4 srcMatrix;   // Matrix to use for texture. 
+uniform int srcWidth;   // Pixel width of the texture's buffer.
+uniform int srcHeight; //  Pixel height of the texture's buffer.
+uniform int srcCols;  // `cols` metadata from the texture's buffer.
+uniform int srcRows; //  `rows` metadata from the texture's buffer.
+```
+
+For multiple textures, replace `src` with the name of the texture.
+
 # Uniforms
 
 ## Buffer
@@ -98,19 +117,3 @@ uniform float passDensity; // 1.0 / passTotal
 uniform float passX; // passIndex / passTotal
 ```
 
-# Textures
-
-``` glsl
-#include "ofxLoopin/src.glsl"
-```
-
-``` glsl
-uniform sampler2D srcSampler; // GLSL Sampler
-uniform mat4 srcMatrix;   // Matrix to use for texture. 
-uniform int srcWidth;   // Pixel width of the texture's buffer.
-uniform int srcHeight; //  Pixel height of the texture's buffer.
-uniform int srcCols;  // `cols` metadata from the texture's buffer.
-uniform int srcRows; //  `rows` metadata from the texture's buffer.
-```
-
-For multiple textures, replace `src` with the name of the texture.
