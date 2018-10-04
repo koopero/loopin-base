@@ -4,9 +4,7 @@
 
 void main()
 {
-  srcCoord = texCoord;
-  srcCoord = (srcMatrix*vec4(srcCoord.x,srcCoord.y,0,1)).xy;
-
+  srcCoord = texcoord;
   vertColour = vec4(1,1,1,1);
 
   vec4 pos = position;
