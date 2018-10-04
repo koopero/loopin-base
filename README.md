@@ -7,7 +7,7 @@ This project should work on a properly configured Mac, Linux or Windows box or a
 ## Installation
 
 ``` sh
-git clone https://github.com/koopero/loopin-starter.git YOURPROJECT
+git clone https://github.com/koopero/loopin-base.git YOURPROJECT
 cd YOURPROJECT
 # Set your project name, repositories, etc here.
 npm init 
@@ -17,7 +17,11 @@ npm start
 
 ## Usage
 
-Once the starter project is running, point your browser at [http://localhost:7004](http://localhost:7004/). This will show combined controls and documentation for the planet example.
+Once the starter project is running, point your browser at [http://localhost:7004](http://localhost:7004/). This will show combined controls and documentation for the project.
+
+## Documentation
+
+See [The Loopin Cookbook](COOKBOOK.md) for reference.
 
 ## Project Layout
 
@@ -42,10 +46,10 @@ Contains `.jpg` and `.png` [images](https://loopin.tech/ofxLoopin-image.html), w
 Mostly boilerplate code to get everything up and running. `node/loopin.js` contains Loopin setup, with configuration of defaults such as which directories are autoloaded. The file `node/logic/snapshot.js` contains a simple utility to take screenshots of the application, as an example of using javascript logic in Loopin apps.
 
 ### preset/
-YAML configuration files which are 'patched' to the Loopin system. By default, *all* presets in this directory are autoloaded.
+YAML configuration files which are 'patched' to the Loopin system. By default, *all* presets in this directory are autoloaded. 
 
 ### shader/
-GLSL shaders. To create a new shader, duplicate `shader/base.vert` and/or `shader/base.vert` with a new name. See [Shader Cheat Sheet](shader/README.md) for uniform reference.
+GLSL shaders. To create a new shader, duplicate `shader/base.vert` and/or `shader/base.vert` with a new name. See [Shader Cheat Sheet](shader/README.md) for shader and uniform reference.
 
 # Credits
 
