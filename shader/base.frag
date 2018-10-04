@@ -4,6 +4,6 @@
 
 void main()
 {
-  OUT = texture(srcSampler, srcCoord);
+  OUT = Texture(srcSampler, srcCoord);
   OUT *= vertColour;
 }
