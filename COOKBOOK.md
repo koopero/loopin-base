@@ -1,7 +1,10 @@
-# Loopin Cookbook
+# The Loopin Cookbook
+
+This file contains a fairly complete documentation of [Loopin](https://github.com/koopero/loopin) features, conventions and techniques as a series of copy-pastable code examples, progressing from most basic to most advanced.
 
 ## Contents
 
+- [Language Prerequisites](#language-prerequisites)
 - [Starting a Project](#starting-a-project)
 - [Working on a Project](#working-on-a-project)
 - [A Simple Preset](#a-simple-preset)
@@ -17,7 +20,7 @@
 - [Orbit Camera](#orbit-camera)
 - [2D Transformation](#2d-transformation)
 - [Make a texture](#make-a-texture)
-- [The `src` Texture](#the-`src`-texture)
+- [The `src` Texture](#the-src-texture)
 - [Include Shader Libraries](#include-shader-libraries)
 - [Load an Image](#load-an-image)
 - [Save an Image](#save-an-image)
@@ -28,13 +31,14 @@
 - [Direct Mesh Editing](#direct-mesh-editing)
 - [Syphon Input and Output](#syphon-input-and-output)
 - [Connect a Kinect](#connect-a-kinect)
-- [Double Buffering / Sweet Feedback Loops](#double-buffering-/-sweet-feedback-loops)
+- [Double Buffering / Sweet Feedback Loops](#double-buffering--sweet-feedback-loops)
 - [Advanced Image Loading](#advanced-image-loading)
 - [Detailed Shader Setup](#detailed-shader-setup)
 - [Detailed Project Layout](#detailed-project-layout)
 - [Web Endpoints](#web-endpoints)
 - [Controlling Javascript](#controlling-javascript)
 - [Sending Pixels to Javascript](#sending-pixels-to-javascript)
+- [Credits](#credits)
 
 
 ## Language Prerequisites
@@ -46,7 +50,7 @@ Knowledge of the following languages, or a willingness to learn, should be consi
 - **Markdown** : Control configuration and documentation.  
 - **node.js** : Project boilerplate and higher level logic.
 
-This document contains examples in all of these language. Many examples will have example filenames as their first line. YAML examples are assumed to be Loopin presets.
+This document contains examples in all of these language. Many examples will have example filenames as their first line. Examples written in YAML are assumed to be Loopin presets.
 
 ## Starting a Project
 
@@ -149,6 +153,8 @@ void main()
 Loopin controls are defined in Markdown files in `control/*.md`. These files are mostly standard Markdown, with the intention of combining project documentation and control.
 
 The actual controls are defined in YAML using codeblock elements with the language `control`.
+
+All paths defined in Loopin presets may be controlled. The prefix `loopin/` is used in controls to allow controls outside the `ofxLoopin` runtime.
 
 The most useful types of control are `float` ( slider ) and `options`.
 
@@ -499,6 +505,20 @@ mesh/example_sphere:
     split: false
 ```
 
+### Mesh Generator Uniforms
+
+``` glsl
+#include "ofxLoopin/mesh.glsl"
+```
+
+``` glsl
+// Expanded from `ofxLoopin/mesh.glsl`
+uniform float meshAspect;
+uniform int meshCount;
+uniform int meshRows;
+uniform int meshCols;
+```
+
 ## Window
 
 ``` yaml
@@ -751,7 +771,7 @@ image/example_image:
 
 ## Save an Image
 
-The base project includes a `snapshot` function to save stills of buffers. To configure it, edit the file `control/utility.md` and add your project's buffers to the snapshot control.
+The base project includes a `snapshot` function to save stills of buffers. To configure it, edit the file `control/utility.md` and add your project's buffers to the snapshot control. See the file `node/logic/snapshot.js` for implementation.
 
 To save an image from javascript:
 ``` javascript
@@ -1187,7 +1207,7 @@ loopin.dispatchListen( 'pixels', function ( event ) {
     let data = event.data
     let width = data.width // In pixels
     let height = data.height // In pixels
-    let pixels = new Buffer( data.data, 'base64' )
+    let pixels = Buffer.from( data.data, 'base64' )
 
     // Send pixels to your WS2812s!
 
@@ -1197,3 +1217,13 @@ loopin.dispatchListen( 'pixels', function ( event ) {
   })
 }
 ```
+
+# Credits
+
+[Loopin](https://github.com/koopero/loopin) is the brain-child of Vancouver-based creative technologist [Samm Zuest Cooper](https://github.com/koopero).
+
+Loopin development relies on the patient and enthusiastic support of [HFour Design Studio](http://hfour.ca/).
+
+`ofxLoopin` would not be possible without the incredible [openFrameworks](http://openframeworks.cc/community/) project.
+
+Thank you to the wonderful organizers and community at [Vancouver Creative Technology](https://www.meetup.com/Vancouver-Creative-Technology/) for feedback and encouragement.
