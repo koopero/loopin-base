@@ -4,6 +4,7 @@ This file contains a fairly complete documentation of [Loopin](https://github.co
 
 ## Contents
 
+- [Security Warning](#security-warning)
 - [Language Prerequisites](#language-prerequisites)
 - [Starting a Project](#starting-a-project)
 - [Working on a Project](#working-on-a-project)
@@ -40,6 +41,9 @@ This file contains a fairly complete documentation of [Loopin](https://github.co
 - [Sending Pixels to Javascript](#sending-pixels-to-javascript)
 - [Credits](#credits)
 
+
+## Security Warning
+The Loopin system intentionally creates a very promiscuous, completely unsecured local web server while running. This server should not be exposed to open web, nor run in an environment where hooliganism is a possibility. For production applications, security *MUST* be implemented at the network layer.
 
 ## Language Prerequisites
 
