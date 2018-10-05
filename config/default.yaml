@@ -1,6 +1,8 @@
+# Set verbose console logging.
 debug:
   verbose: true
 
+# Server configuration.
 server:
   # HTTP port
   listen: 7004
@@ -11,6 +13,8 @@ server:
   # Control pages
   page:
     title: Loopin Base Project
+
+    # Add your pages here.
     nav:
       - title: Main
         page: control/index.md
