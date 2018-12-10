@@ -453,6 +453,19 @@ uniform float clockGlobalDelta; // Number of seconds elapsed since the last fram
 ```
 
 
+## Patching with Javascript
+
+``` javascript
+loopin.patch( 42.3, 'render/example/float/uniform_example' )
+```
+
+## Animating with Javascript
+
+``` javascript
+
+
+```
+
 ## Mesh Generators
 ``` yaml
 # Default generator is a quad using plane.
