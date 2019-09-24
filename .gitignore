@@ -11,6 +11,9 @@ data/**
 # especially in multi-user or multi-machine applications.
 # !data/persist.yaml
 
+# Local config file.
+loopin.local.yaml
+
 # Binary files from loopin-native.
 native/
 
@@ -20,6 +23,7 @@ native/
 node_modules/
 npm-debug.log
 yarn.lock
+yarn-error.log
 package-lock.json
 
 #

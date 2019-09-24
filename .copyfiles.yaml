@@ -1,0 +1,8 @@
+- .gitignore
+- shader/*
+- control/*
+- preset/*
+- loopin.config.yaml
+- loopin.local.yaml
+- - defaultIndex.js
+  - index.js
