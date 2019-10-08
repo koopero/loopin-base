@@ -41,11 +41,15 @@ module.exports = function loopin( config ) {
     verbose: _.get( config, 'debug.verbose' ),
   } )
 
-  const server = loopin.plugin( require('loopin-server'), config['server'] || {} )
-  server.hortenServer.on('openExpress', function ( app ) {
-    // This is where to add your own express routes.
-  } )
-  server.open()
+  loopin.patch( config.patch )
+
+  if ( config.server ) {
+    const server = loopin.plugin( require('loopin-server'), config['server'] || {} )
+    server.hortenServer.on('openExpress', function ( app ) {
+      // This is where to add your own express routes.
+    } )
+    server.open()
+  }
 
   return loopin.bootstrap()
   .then( function () {
