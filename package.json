@@ -1,6 +1,6 @@
 {
   "name": "loopin-base",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "Base project for Loopin applications.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "loopin-native-init": "./init.js"
+    "loopin-base-init": "./init.js"
   },
   "repository": {
     "type": "git",
