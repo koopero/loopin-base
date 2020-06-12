@@ -3,6 +3,8 @@ module.exports = function loopin( config ) {
   const loopin = module.exports = require('loopin').global()
   loopin.config = config
 
+  loopin.config = config
+
   // Resolve to project root
   const resolve = require('path').resolve.bind( null, config.root )
   loopin.plugin('files')
