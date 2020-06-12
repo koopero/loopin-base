@@ -1,6 +1,7 @@
 const _ = require('lodash')
 module.exports = function loopin( config ) {
   const loopin = module.exports = require('loopin').global()
+  loopin.config = config
 
   // Resolve to project root
   const resolve = require('path').resolve.bind( null, config.root )
@@ -8,7 +9,8 @@ module.exports = function loopin( config ) {
   loopin.filesRoot( resolve() )
 
   // Include the interface between loopin and horten
-  loopin.plugin('horten','loopin/')
+  loopin.plugin('horten', config.horten )
+  
 
   // Load and watch all presets from the directory ./preset
   loopin.plugin('presetDir')

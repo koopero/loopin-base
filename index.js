@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-exports.open = async function startApplicationFromDirectory( root ) {
+exports.config = function config( root ) {
   const _ = require('lodash')
   const fs = require('fs')
   const yaml = require('js-yaml')
@@ -26,6 +26,11 @@ exports.open = async function startApplicationFromDirectory( root ) {
   
   configFiles.map( loadConfigFile )
 
+  return config
+}
+
+exports.open = async function startApplicationFromDirectory( root ) {
+  const config = exports.config( root )
   const loopin = await require('./node/loopin')( config )
   return loopin
 }

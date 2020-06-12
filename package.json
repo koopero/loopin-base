@@ -1,6 +1,6 @@
 {
   "name": "loopin-base",
-  "version": "0.10.3",
+  "version": "0.11.0",
   "description": "Base project for Loopin applications.",
   "main": "index.js",
   "scripts": {
@@ -33,9 +33,9 @@
     "js-yaml": "^3.10.0",
     "lodash": "^4.17.15",
     "loopin": "^0.9.3",
-    "loopin-native": "^0.10.2",
+    "loopin-native": "^0.11.0",
     "loopin-server": "^0.2.0",
-    "loopin-shaders": "^0.10.2",
+    "loopin-shaders": "^0.10.3",
     "zeropad": "^1.1.0"
   }
 }

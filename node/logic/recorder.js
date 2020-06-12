@@ -104,7 +104,7 @@ function recorder() {
         text: `recorder - frame ${index}`
       }, 'osd/')
 
-      return loopin.save( buffer, { dest: filename } )
+      return loopin.save( buffer, { dest: filename, format: 'jpg' } )
       .then( advance )
     }
 
